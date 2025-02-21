@@ -1,0 +1,469 @@
+h2, h3 {
+  color: white;
+}
+
+.view-container {
+  width: 79vw;
+  padding: 1.5em;
+  margin-left: 11vw;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 1096px) {
+  .view-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+  }
+}
+
+.nav {
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .nav-logo {
+    margin: 20px auto;
+  }
+  .nav-menu {
+    width: 100%;
+  }
+}
+
+.nav-menu-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  color: white;
+  li {
+    width: 50%;
+    text-align: center;
+    background: #555;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background 300ms ease-in-out;
+    &:hover {
+      background: #333;
+    }
+  }
+}
+
+.about-card {
+  background: #333;
+  padding: 3em;
+  border-radius: 10px;
+  color: white;
+  .card-title {
+    display: flex;
+    align-items: center;
+    background: #333;
+    border-radius: 10px;
+    .avatar {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      margin: 0 30px;
+    }
+  }
+}
+
+.exp-card {
+  background: #333;
+  padding: 3em;
+  border-radius: 10px;
+  color: white;
+}
+
+.title-text-content {
+  p {
+    margin-bottom: 0;
+    color: rgb(210, 210, 210);
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.card-content p {
+  line-height: 1.5;
+  margin: 30px auto;
+}
+
+table {
+  border-spacing: 0px;
+  margin: 50px auto;
+  tr th,
+  tr td {
+    border: 1px solid white;
+    border-top: none;
+    padding: 10px;
+    text-align: center;
+    &:first-of-type {
+      border-left: none;
+    }
+    &:nth-of-type(2) {
+      border-right: none;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.container p {
+  text-align: center;
+  font-size: 130px;
+}
+
+.nav-link a {
+  color: black !important;
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+
+.container button {
+  font-size: 70px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.container button:hover {
+  background: rgb(36, 36, 36);
+  cursor: pointer;
+}
+
+// BREAK
+
+.repo-cards-div-main {
+  grid-gap: 1rem 1rem;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+}
+
+.repo-card-div {
+  color: rgb(88, 96, 105);;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  padding: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.repo-card-div:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+.repo-card-div p {
+  margin-bottom: 0;
+}
+
+.repo-stats {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgb(106, 115, 125);
+  margin-top: 10px;
+}
+
+.repo-left-stat {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  display: flex;
+}
+
+.language-color {
+  width: 10px;
+  height: 10px;
+  background-color: #0000ff;
+  margin-right: 0.25rem;
+  border-radius: 100%;
+}
+
+.repo-left-stat span {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.repo-name-div {
+  display: flex;
+  align-items: center;
+}
+
+.repo-svg {
+  margin-right: 0.5rem;
+  min-width: 16px;
+  margin-top: 1px;
+}
+
+.repo-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(36, 41, 46);
+  margin-bottom: 0.75rem;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  // overflow: hidden;
+  // margin: 0px;
+  margin-top: -15px;
+  height: 30px;
+}
+
+.repo-star-svg {
+  margin-right: 0.3rem;
+}
+
+.repo-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 10px;
+}
+
+.dark-card-mode {
+  background-color: #171c28;
+  color: #ffffff;
+}
+.dark-card-mode p {
+  color: #ffffff;
+}
+
+.dark-card-mode .repo-svg {
+  fill: #ffffff;
+}
+
+.dark-card-mode:hover {
+  background-color: #55198b !important;
+  box-shadow: 0px 0px 16px #d9dbdf;
+}
+
+.experience-card {
+  position: relative;
+  background-color: rgb(255, 255, 255);;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  border-radius: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.397);
+}
+
+.experience-card-dark {
+  position: relative;
+  background-color: #171c28;;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  border-radius: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.397);
+}
+
+.experience-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+
+.experience-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  );
+  border-radius: 10px 10px 0px 0px;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  height: 11rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.experience-blurred_div {
+  position: absolute;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2)
+  );
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  height: 11rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.experience-div-company {
+  position: absolute;
+  background: transparent;
+  height: 9rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-text-company {
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.experience-roundedimg {
+  position: absolute;
+  object-fit:fill;
+  left: 0;
+  right: 0;
+  top: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.experience-text-role {
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0px;
+  padding-top: 1.5rem;
+  line-height: normal;
+}
+.dark-mode-text {
+  color: #ffffff !important;
+}
+.experience-text-date {
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  margin: 0px;
+  padding-top: 1rem;
+  font-weight: 600;
+}
+
+.experience-text-desc {
+  text-align: center;
+}
+
+.experience-text-details {
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .experience-text-role {
+    padding-top: 0.5rem;
+    font-size: 22px;
+  }
+  .experience-text-company {
+    font-size: 22px;
+  }
+  .experience-text-date {
+    font-size: 18px;
+  }
+  .experience-roundedimg {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-text-role {
+    font-size: 22px;
+  }
+  .experience-text-company {
+    font-size: 22px;
+  }
+  .experience-text-date {
+    font-size: 18px;
+  }
+  .experience-text-desc {
+    font-size: 16px;
+  }
+}
+
+.experience-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1rem 1rem;
+}
+
+.experience-heading {
+  font-size: 56px;
+  font-weight: 400;
+  color: white;
+}
+
+.experience-container {
+  display: flex;
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 1rem;
+}
+
+.experience-container > * {
+  flex: 1;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .experience-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+}
